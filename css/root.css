@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+:root {
+    --color-black: #333;
+    --color-grey: #888;
+    --color-white: #fff;
+    --color-orange: #fd5001;
+}
