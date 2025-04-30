@@ -12,3 +12,48 @@
     --color-white: #fff;
     --color-orange: #fd5001;
 }
+
+@font-face {
+    font-family: "SBAggroB";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+}
+
+/*//// HEADER ////*/
+#header {
+    width: 100%;
+    height: 60px;
+    padding: 0 80px;
+    /* background-color: aqua; */
+    position: fixed;
+    z-index: 1000;
+}
+#header .header-left {
+}
+#header .header-left a {
+}
+#header .header-left a img {
+    height: 20px;
+    padding: 20px;
+}
+
+.footerblack {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #333;
+}
+.footerblack span {
+    color: #888;
+    position: absolute;
+    right: 80px;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: normal;
+}

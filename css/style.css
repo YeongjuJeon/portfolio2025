@@ -1,48 +1,53 @@
-@font-face {
-    font-family: "SBAggroB";
-    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
-        format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    width: 100%;
-}
-
-/*//// HEADER ////*/
-#header {
-    width: 100%;
-    height: 60px;
-    padding: 0 80px;
-    /* background-color: aqua; */
-    position: fixed;
-    z-index: 1000;
-}
-#header .header-left {
-}
-#header .header-left a {
-}
-#header .header-left a img {
-    height: 20px;
-    padding: 20px;
-}
-
 /*//// SECTION///// */
 #section1 {
     width: 100%;
     height: 900px;
     background-color: var(--color-orange);
 }
-#section1 h1 {
+#section1 > h1 {
     font-family: "SBAggroB";
     font-size: 300px;
     letter-spacing: -5%;
     line-height: 300px;
     text-align: center;
 }
-#section1 h1.s1Title {
+#section1 .s1show {
+    width: 100%;
+    color: transparent;
+    position: relative;
+    /* width: max-content; */
+    background: linear-gradient(to right, #fff, #fff) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+    z-index: 20;
+}
+#section1 .s1Title {
+    /* display: block; */
     padding-top: 160px;
+}
+#section1 h1 p {
+    width: 100%;
+    position: absolute;
+    color: #000;
+    z-index: 1;
+    font-family: "SBAggroB";
+    font-size: 300px;
+    letter-spacing: -5%;
+    line-height: 300px;
+    top: 0px;
+    text-align: center;
+}
+#section1 .s1hide1 {
+    top: 160px;
+    width: 100%;
+    text-align: center;
+}
+#section1 .s1hide2 {
+    top: 460px;
+    width: 100%;
+    text-align: center;
 }
 
 #section2 {
@@ -185,77 +190,60 @@ body {
 #section4 .s4contentbox .s4content {
     width: 50%;
     height: 520px;
-    background-color: #888;
+    background-color: aqua;
     position: relative;
+    overflow: hidden;
 }
-#section4 .s4contentbox .s4content .s4contentshadow {
-    background-color: rgba(0, 0, 0, 0.3);
+
+#section4 .s4contentbox .s4content .s4contenttop {
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-orange);
     width: 100%;
     height: 100%;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    top: 100%;
+    transition: 0.3s ease-in-out;
 }
-#section4 .s4contentbox .s4content:nth-child(2) .s4contentshadow {
-    background-color: rgba(0, 0, 0, 0.7);
+#section4 .s4contentbox .s4content:first-child:hover .s4contenttop {
+    top: 0%;
 }
-#section4 .s4contentbox .s4content .s4contenttop {
-    position: relative;
-    z-index: 10;
+#section4 .s4contentbox .s4content:nth-child(2):hover .s4contenttop {
+    top: 0%;
 }
 #section4 .s4contentbox .s4content .s4contenttop h3 {
-    opacity: 0;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
-    margin: 320px 0 10px 80px;
+    margin: 360px 0 20px 40px;
 }
 #section4 .s4contentbox .s4content .s4contenttop p {
-    opacity: 0;
-    color: #ccc;
+    color: #fff;
     font-size: 20px;
     font-weight: normal;
-    margin-left: 80px;
+    margin-left: 40px;
 }
-#section4 .s4contentbox .s4content:first-child {
+#section4 .s4contentbox .s4content:first-child .s4contentbottom {
     background-image: url(../img/decover1.png);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
-#section4 .s4contentbox .s4content:first-child:hover .s4contenttop h3,
-#section4 .s4contentbox .s4content:first-child:hover .s4contenttop p {
-    opacity: 1;
-    transition: 0.3s;
-}
-#section4 .s4contentbox .s4content:first-child:hover {
-    background-size: 120%;
-    transition: 0.3s;
-}
-#section4 .s4contentbox .s4content:first-child:hover > .s4contentshadow {
-    opacity: 1;
-    transition: 0.3s;
-}
-#section4 .s4contentbox .s4content:nth-child(2) {
+
+#section4 .s4contentbox .s4content:nth-child(2) .s4contentbottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
     background-image: url(../img/decover2.png);
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
 }
-#section4 .s4contentbox .s4content:nth-child(2):hover {
-    background-size: 120%;
-    transition: 0.3s;
-}
-#section4 .s4contentbox .s4content:nth-child(2):hover .s4contenttop h3,
-#section4 .s4contentbox .s4content:nth-child(2):hover .s4contenttop p {
-    opacity: 1;
-    transition: 0.3s;
-}
-#section4 .s4contentbox .s4content:nth-child(2):hover > .s4contentshadow {
-    opacity: 1;
-    transition: 0.3s;
-}
+
 #section5 {
     width: 100%;
     height: auto;
@@ -583,18 +571,4 @@ body {
 }
 #footer .footertext p:nth-child(3) {
     width: 25%;
-}
-.footerblack {
-    width: 100%;
-    height: 60px;
-    position: relative;
-    background-color: #333;
-}
-.footerblack span {
-    color: #888;
-    position: absolute;
-    right: 80px;
-    font-size: 16px;
-    line-height: 60px;
-    font-weight: normal;
 }
